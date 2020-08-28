@@ -1,10 +1,9 @@
-function Pizza(userName, size, notes) {
+function Pizza(userName, size, notes, toppings) {
   this.userName = userName;
   this.size = size;
   this.notes = notes;
+  this.toppings = toppings;
   this.pizzaPrice = this.price();
-
-  // this.toppings = toppings;
 }
 //user starts with small cheese pizza at $10
 Pizza.prototype.price = function () {
@@ -16,7 +15,8 @@ Pizza.prototype.price = function () {
   } else if (this.size === "Large") {
     baseCost += 8;
   }
-  console.log(this.size);
+  baseCost += this.topping.length * 0.5;
+  console.log(this.toppings);
   return baseCost;
 };
 
@@ -39,31 +39,13 @@ $(document).ready(function () {
     const pizzaSizeInput = $("#pizzaSize").val();
     console.log(pizzaSizeInput);
     const notesInput = $("#Notes").val();
-    // let toppingsInput = [];
-    // $("input:checkbox[name=type]:checked")
-    //   .each(function () {
-    //     toppingsInput.push($(this.val()));
-    //   })("#pep")("#pin")("#jal")("#mush")("#olives")
-    //   .val();
-
-    newOrder = new Pizza(userNameInput, pizzaSizeInput, notesInput);
+    let toppingsInput = [];
+    console.log(toppingsInput);
+    $("input:checkbox[name=toppins]:checked").each(function () {
+      toppingsInput.push($(this).val());
+    });
+    newOrder = new Pizza(userNameInput, pizzaSizeInput, notesInput, toppingsInput);
     // receipt(newOrder);
     console.log(newOrder);
   });
 });
-
-// (form)
-// Change (modifiers)
-
-// - Size of pizza: small medium large (3) (base of 10 plus \$4+ for each to object )
-
-// - Toppings : pepperoni, pinapple, jalapeno, mushroom, peppers (5) (each + 50 cents to object)
-
-// (form)
-
-// Recipt (display to user)
-
-// - Name of user
-// - size of pizza with toppings chosen,
-// - price for pizza.
-// - add time for pick up if possible. (20mins from time entered)
