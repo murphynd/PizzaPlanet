@@ -4,7 +4,6 @@ function Pizza(userName, size, notes) {
   this.notes = notes;
   this.toppings;
   this.numberOfToppings;
-  this.toppingPrice = this.toppingcost();
   this.pizzaPrice = this.sizeprice();
   // this.addtoppingPrice = this.toppingcost();
 }
@@ -21,15 +20,9 @@ Pizza.prototype.sizeprice = function () {
   return baseCost;
 };
 
-Pizza.prototype.toppingcost = function () {
-  cost = this.numberOfToppings;
-  cost *= 0.5;
-  alert(cost);
-};
-
 Pizza.prototype.addtoppings = function (input) {
   this.toppings = input;
-  this.numberOfToppings = parseFloat(input.length);
+  this.numberOfToppings = parseInt(input.length);
 };
 
 // Pizza.prototype.toppingcost = function () {
@@ -38,16 +31,17 @@ Pizza.prototype.addtoppings = function (input) {
 //   console.log(toppings);
 // };
 
-// function receipt(newOrder) {
-//   $("#recipt").show();
+function receipt(newOrder) {
+  $("#recipt").show();
+  JSON.stringify(newOrder);
 
-//   // can I print just newOrder?
-//   newOrder.userName;
-//   newOrder.pizzaPrice;
-//   newOrder.size;
-//   newOrder.toppings;
-//   newOrder.notes;
-// }
+  // can I print just newOrder?
+  // newOrder.userName;
+  // newOrder.pizzaPrice;
+  // newOrder.size;
+  // newOrder.toppings;
+  // newOrder.notes;
+}
 
 $(document).ready(function () {
   $("#pizzaOrder").submit(function (event) {
@@ -65,7 +59,7 @@ $(document).ready(function () {
 
     newOrder.addtoppings(toppingsInput);
 
-    // receipt(newOrder);
+    receipt(newOrder);
     console.log(newOrder);
   });
 });
