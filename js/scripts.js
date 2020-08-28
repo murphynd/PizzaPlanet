@@ -1,7 +1,7 @@
 function Pizza () {
 userName: NAME
 PizzaPrice: 10
-size: small
+size: 
 toppings: []
 }
 //user starts with small cheese pizza at $10
@@ -14,6 +14,16 @@ pizza.prototype.size:
 
 
 Document READY 
+userNameInput :("#Username")
+pizzaSizeInput: ("#pizzaSize")
+toppingsInput: ("#pep")("#pin")("#jal")("#mush")("#olives")
+notesInput: ("#Notes")
+
+
+
+
+
+
 (form)
 Change (modifiers)
 
