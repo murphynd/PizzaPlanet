@@ -46,7 +46,11 @@ $(document).ready(function () {
     $("#I").text(newOrder.notes);
     $("#price").text(newOrder.pizzaPrice);
     console.log(newOrder);
+
+    $("#orderAgain").click(function () {
+      $("#pizzaOrder").trigger("reset");
+      $("#recipt").hide();
+      $("#pizzaOrder").show();
+    });
   });
-  $("#orderAgain").click(function (event) {
-    event.preventDefault();
 });
