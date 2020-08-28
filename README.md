@@ -24,13 +24,14 @@ The most important part of this code review is using and demonstrating your unde
 
 ## Specs
 
-'''
+```
 Pizza (object)
 User name: NAME
 Pizza price: 10
-Toppings: 0
+size: small
+Toppings: []
 
-user starts with small cheese pizza at \$10
+user starts with small cheese pizza at $10
 
 (form)
 Change (modifiers)
@@ -47,8 +48,7 @@ Recipt (display to user)
 - size of pizza with toppings chosen,
 - price for pizza.
 - add time for pick up if possible. (20mins from time entered)
-
-'''
+```
 
 Objectives
 Your code will be reviewed for the following objectives:
