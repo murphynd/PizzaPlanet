@@ -42,7 +42,8 @@ $(document).ready(function () {
     $("#N").text(newOrder.userName);
     $("#s").text(newOrder.size);
     $("#t").text(newOrder.numberOfToppings);
-    $("#list").append("<li>" + newOrder.toppings + "</li>");
+    // $("#list").append("<li>" + newOrder.toppings + "</li>");
+    $("#list").html("<ul><li>" + newOrder.toppings.join("</li><li>") + "</li></ul>");
     $("#I").text(newOrder.notes);
     $("#price").text(newOrder.pizzaPrice);
     console.log(newOrder);
