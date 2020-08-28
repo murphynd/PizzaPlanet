@@ -1,3 +1,7 @@
 #recipt {
   display: none;
 }
+.jumbotron {
+  background-image: url("pizzaPlanet.png");
+  background-size: cover;
+}

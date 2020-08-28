@@ -8,7 +8,8 @@
 
 #### Pizza Parlor
 
-A website for a pizza company
+A website for a pizza company$("#recipt").show();
+    $("#pizzaOrder").hide();
 
 - user can:
 - choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc)
@@ -24,14 +25,15 @@ The most important part of this code review is using and demonstrating your unde
 
 ## Specs
 
+Plan:
+
 ```
 Pizza (object)
-User name: NAME
-Pizza price: 10
-size: small
+User name:
+Pizza price:
+size:
 Toppings: []
 
-user starts with small cheese pizza at $10
 
 (form)
 Change (modifiers)
