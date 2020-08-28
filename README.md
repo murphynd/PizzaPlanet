@@ -1,37 +1,102 @@
-# _{Application Name}_
+# _Pizza Parlor_ 🍕
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Pizza Planet, Aug 28,2020_
 
-#### By _**{List of contributors}**_
+#### By _**Natalie Murphy**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+#### Pizza Parlor
+
+A website for a pizza company
+
+- user can:
+- choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc)
+- size to order a pizza
+- see the final cost
+
+- Allow the user to choose toppings and size for the pizza they'd like to order.
+- Create a pizza object constructor with properties for toppings and size.
+- Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
+
+You do not need to have a complex formula for determining cost (although you can if you like).
+The most important part of this code review is using and demonstrating your understanding of constructors and prototypes.
+
+## Specs
+
+'''
+Pizza (object)
+User name: NAME
+Pizza price: 10
+Toppings: 0
+
+user starts with small cheese pizza at \$10
+
+(form)
+Change (modifiers)
+
+- Size of pizza: small medium large (3) (base of 10 plus \$4+ for each to object )
+
+- Toppings : pepperoni, pinapple, jalapeno, mushroom, peppers (5) (each + 50 cents to object)
+
+(form)
+
+Recipt (display to user)
+
+- Name of user
+- size of pizza with toppings chosen,
+- price for pizza.
+- add time for pick up if possible. (20mins from time entered)
+
+'''
+
+Objectives
+Your code will be reviewed for the following objectives:
+
+Code meets standards from previous weeks.
+Constructors and prototypes are used successfully.
+Application works as expected.
+Plain English specs are included in your README.
+Required functionality is in place by the 5:00pm Friday deadline.
+Project is in a polished, portfolio-quality state.
+Project demonstrates an understanding of this week's concepts. If prompted, you can discuss your code with an instructor using correct terminology.
+Further Exploration
+If you finish meeting the objectives for this project, consider adding additional features, such as:
+
+Style your site with CSS and images.
+Allow users to order more than one pizza with different toppings.
+Display the list of pizzas ordered as links that can be clicked for details.
+Offer a delivery option that then requires address information.
+Submission
+
+<hr>
+
+Submit your code for review to the Object-Oriented JavaScript code review on Epicenter by 5:00pm on Friday.
+
+Visit Independent Projects and Code Reviews for details on how to submit, how feedback works and course completion requirements.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+- Clone this repository
+- Open index.html in a browser
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+No Known bugs.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+If you run into any issues or have questions, ideas or concerns contact Natalie Murphy at Nataliemurphy500@gmail.com or make a contribution to the code.
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+- HTML
+- CSS
+- jQuery
+- Javascript
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+MIT
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 Natalie Murphy
