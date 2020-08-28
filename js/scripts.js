@@ -1,24 +1,35 @@
-function Pizza () {
-userName: NAME
-PizzaPrice: 10
-size: 
-toppings: []
+function Pizza (userName,size,notes) {
+this.userName: userName;
+this.pizzaPrice: this.price();
+this.size: size;
+this.toppings: this.toppings();
+this.notes: notes
 }
 //user starts with small cheese pizza at $10
-
+pizza.prototype.price:
 pizza.prototype.adduser:
 pizza.prototype.toppings:
 pizza.prototype.size:
 
+function receipt(newOrder){
+  $("#recipt").show();
 
+  // can I print just newOrder?
+  newOrder.userName
+  newOrder.pizzaPrice
+  newOrder.size
+  newOrder.toppings
+  newOrder.notes
+}
 
-
+$(document).ready(function () {
 Document READY 
+newOrder = new Pizza()
 userNameInput :("#Username")
 pizzaSizeInput: ("#pizzaSize")
 toppingsInput: ("#pep")("#pin")("#jal")("#mush")("#olives")
 notesInput: ("#Notes")
-
+});
 
 
 
