@@ -1,20 +1,22 @@
 function Pizza(userName, size, notes) {
   this.userName = userName;
-  this.pizzaPrice = this.price();
   this.size = size;
-  // this.toppings = toppings;
   this.notes = notes;
+  this.pizzaPrice = this.price();
+
+  // this.toppings = toppings;
 }
 //user starts with small cheese pizza at $10
 Pizza.prototype.price = function () {
   let baseCost = 10;
-  if (this.size === "Medium") {
+  if (this.size === "Small") {
+    baseCost += 0;
+  } else if (this.size === "Medium") {
     baseCost += 4;
-  }
-  if (this.size === "Large") {
+  } else if (this.size === "Large") {
     baseCost += 8;
   }
-  console.log(baseCost);
+  console.log(this.size);
   return baseCost;
 };
 
@@ -34,7 +36,7 @@ $(document).ready(function () {
     event.preventDefault();
     const userNameInput = $("#Username").val();
     console.log(userNameInput);
-    let pizzaSizeInput = $("#pizzaSize").val();
+    const pizzaSizeInput = $("#pizzaSize").val();
     console.log(pizzaSizeInput);
     const notesInput = $("#Notes").val();
     // let toppingsInput = [];
