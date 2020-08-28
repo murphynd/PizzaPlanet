@@ -47,4 +47,6 @@ $(document).ready(function () {
     $("#price").text(newOrder.pizzaPrice);
     console.log(newOrder);
   });
+  $("#orderAgain").click(function (event) {
+    event.preventDefault();
 });

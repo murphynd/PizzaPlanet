@@ -56,20 +56,21 @@
           <label for="textArea">Notes</label>
           <textarea class="form-control" id="Notes" rows="3"> </textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-warning">Place My Order!</button>
       </form>
       <div id="recipt">
-        <h3>Here is your Order:</h3>
+        <h3><span id="N"></span>, here is your Order:</h3>
         <p>
-          <span id="N"></span>, you have ordered a 
+          You have ordered a 
           <span id="s"></span> Pizza with
           <span id="t"></span> toppings:
             <ul id="list"></ul>
         </p>
-        <h3>Your Total will be 
-          $ <span id="price"></span></h3>
+        <h3>Your Total will be
+          $<span id="price"></span></h3>
         <h4>Your Instructions:</h4>
         <p><span id="I"></span></p>
+        <button id="orderAgain" type="button" class="btn btn-outline-warning">Order Agian!</button>
       </div>
     </div>
   </body>
