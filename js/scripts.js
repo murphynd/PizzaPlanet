@@ -25,25 +25,25 @@ Pizza.prototype.addtoppings = function (input) {
 $(document).ready(function () {
   $("#pizzaOrder").submit(function (event) {
     event.preventDefault();
+    $("#recipt").show();
+    $("#pizzaOrder").hide();
     const userNameInput = $("#Username").val();
     const pizzaSizeInput = $("#pizzaSize").val();
     const notesInput = $("#Notes").val();
 
     newOrder = new Pizza(userNameInput, pizzaSizeInput, notesInput);
+
     let toppingsInput = [];
     $("input:checkbox[name=toppins]:checked").each(function () {
       toppingsInput.push($(this).val());
     });
     newOrder.addtoppings(toppingsInput);
 
-    $("#recipt").show();
-    $("#pizzaOrder").hide();
-
     $("#N").text(newOrder.userName);
     $("#s").text(newOrder.size);
     $("#t").text(newOrder.numberOfToppings);
     $("#list").append("<li>" + newOrder.toppings + "</li>");
-    $("#instructions").text(newOrder.notes);
+    $("#I").text(newOrder.notes);
     $("#price").text(newOrder.pizzaPrice);
     console.log(newOrder);
   });
