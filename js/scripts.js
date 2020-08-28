@@ -5,9 +5,7 @@ function Pizza(userName, size, notes) {
   this.toppings;
   this.numberOfToppings;
   this.pizzaPrice = this.sizeprice();
-  // this.addtoppingPrice = this.toppingcost();
 }
-//user starts with small cheese pizza at $10
 Pizza.prototype.sizeprice = function () {
   let baseCost = 10;
   if (this.size === "Small") {
@@ -19,29 +17,10 @@ Pizza.prototype.sizeprice = function () {
   }
   return baseCost;
 };
-
 Pizza.prototype.addtoppings = function (input) {
   this.toppings = input;
   this.numberOfToppings = parseInt(input.length);
 };
-
-// Pizza.prototype.toppingcost = function () {
-//   let toppings = this.toppings.length;
-//   toppings * 0.5;
-//   console.log(toppings);
-// };
-
-function receipt(newOrder) {
-  $("#recipt").show();
-  JSON.stringify(newOrder);
-
-  // can I print just newOrder?
-  // newOrder.userName;
-  // newOrder.pizzaPrice;
-  // newOrder.size;
-  // newOrder.toppings;
-  // newOrder.notes;
-}
 
 $(document).ready(function () {
   $("#pizzaOrder").submit(function (event) {
@@ -49,17 +28,23 @@ $(document).ready(function () {
     const userNameInput = $("#Username").val();
     const pizzaSizeInput = $("#pizzaSize").val();
     const notesInput = $("#Notes").val();
+
     newOrder = new Pizza(userNameInput, pizzaSizeInput, notesInput);
-
     let toppingsInput = [];
-
     $("input:checkbox[name=toppins]:checked").each(function () {
       toppingsInput.push($(this).val());
     });
-
     newOrder.addtoppings(toppingsInput);
 
-    receipt(newOrder);
+    $("#recipt").show();
+    $("#pizzaOrder").hide();
+
+    $("#N").text(newOrder.userName);
+    $("#s").text(newOrder.size);
+    $("#t").text(newOrder.numberOfToppings);
+    $("#list").append("<li>" + newOrder.toppings + "</li>");
+    $("#instructions").text(newOrder.notes);
+    $("#price").text(newOrder.pizzaPrice);
     console.log(newOrder);
   });
 });
