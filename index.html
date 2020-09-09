@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <title>Pizza Planet</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <!-- <img src="imgs/pizzaPlanet.png" alt="pizzaPlanet"> -->
-      </div>
-    </div>
-    <div class="container">
-      <form id="pizzaOrder">
-        <h2>Place your order here:</h2>
-        <div class="form-group">
-          <label for="nameInput">Name for Order</label>
-          <input type="text" class="form-control" id="Username" placeholder="Name" required="true" />
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+        <title>Pizza Planet</title>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <!-- <img src="imgs/pizzaPlanet.png" alt="pizzaPlanet"> -->
+            </div>
         </div>
-        <div class="form-group">
-          <label for="sizeSelect">Pizza Size</label>
-          <select class="form-control" id="pizzaSize">
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-          </select>
+        <div class="container">
+            <form id="pizzaOrder">
+                <h2>Place your order here:</h2>
+                <div class="form-group">
+                    <label for="nameInput">Name for Order</label>
+                    <input type="text" class="form-control" id="Username" placeholder="Name" required="true" />
+                </div>
+                <div class="form-group">
+                    <label for="sizeSelect">Pizza Size</label>
+                    <select class="form-control" id="pizzaSize">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                </div>
+                <h4>Choose your toppings</h4>
+                <ul>
+                    <li class="form-check">
+                        <input type="checkbox" name="toppins" value="Pepperoni" />
+                        <label for="toppingSelect"> Pepperoni </label>
+                    </li>
+                    <li class="form-check">
+                        <input type="checkbox" name="toppins" value="Pinapple" />
+                        <label for="toppingSelect"> Pinapple </label>
+                    </li>
+                    <li class="form-check">
+                        <input type="checkbox" name="toppins" value="Jalapeño" />
+                        <label for="toppingSelect"> Jalapeño </label>
+                    </li>
+                    <li class="form-check">
+                        <input type="checkbox" name="toppins" value="Mushrooms" />
+                        <label for="toppingSelect"> Mushrooms </label>
+                    </li>
+                    <li class="form-check">
+                        <input type="checkbox" name="toppins" value="Olives" />
+                        <label for="toppingSelect"> Olives </label>
+                    </li>
+                </ul>
+                <div class="form-group">
+                    <label for="textArea">Notes</label>
+                    <textarea class="form-control" id="Notes" rows="3"> </textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-warning">Place My Order!</button>
+            </form>
+            <div id="recipt">
+                <h3><span id="N"></span>, here is your Recipt:</h3>
+                <p>You have ordered a <span id="s"></span> Pizza with <span id="t"></span> toppings:</p>
+                <div id="list"></div>
+                <h3>Your Total will be $<span id="price"></span></h3>
+                <h4>Your Instructions:</h4>
+                <p><span id="I"></span></p>
+                <button id="orderAgain" type="button" class="btn btn-outline-warning">Order Agian!</button>
+            </div>
         </div>
-        <h4>Choose your toppings</h4>
-        <ul>
-          <li class="form-check">
-            <input type="checkbox" name="toppins" value="Pepperoni" />
-            <label for="toppingSelect"> Pepperoni </label>
-          </li>
-          <li class="form-check">
-            <input type="checkbox" name="toppins" value="Pinapple" />
-            <label for="toppingSelect"> Pinapple </label>
-          </li>
-          <li class="form-check">
-            <input type="checkbox" name="toppins" value="Jalapeño" />
-            <label for="toppingSelect"> Jalapeño </label>
-          </li>
-          <li class="form-check">
-            <input type="checkbox" name="toppins" value="Mushrooms" />
-            <label for="toppingSelect"> Mushrooms </label>
-          </li>
-          <li class="form-check">
-            <input type="checkbox" name="toppins" value="Olives" />
-            <label for="toppingSelect"> Olives </label>
-          </li>
-        </ul>
-        <div class="form-group">
-          <label for="textArea">Notes</label>
-          <textarea class="form-control" id="Notes" rows="3"> </textarea>
-        </div>
-        <button type="submit" class="btn btn-outline-warning">Place My Order!</button>
-      </form>
-      <div id="recipt">
-        <h3><span id="N"></span>, here is your Recipt:</h3>
-        <p>
-          You have ordered a 
-          <span id="s"></span> Pizza with
-          <span id="t"></span> toppings:
-            <div id="list"></div>
-        </p>
-        <h3>Your Total will be
-          $<span id="price"></span></h3>
-        <p>Your Instructions:</p>
-        <p><span id="I"></span></p>
-        <button id="orderAgain" type="button"  class="btn btn-outline-warning">Order Agian!</button>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

@@ -52,6 +52,24 @@ Recipt (display to user)
 - add time for pick up if possible. (20mins from time entered)
 ```
 
+```
+Spec:create a object to collect data
+input: username, pizza size, notes
+output: new order: this.username, this.size, this.notes
+```
+
+```
+Spec:user gives input on toppings and it collects into object
+input: checkbox input of differing toppings
+output:new order: this.username, this.size, this.notes, this.toppings, this.numberOfToppings
+```
+
+```
+Spec: build a method to calculate cost
+input: object input.sizeprice()
+output:a price based on input from the form that populates order object.
+```
+
 ## Setup/Installation Requirements
 
 - Clone this repository
